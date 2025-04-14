@@ -1,89 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head><link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpellTree - Mochila do Jogador</title>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mochila RPG</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>SpellTree - Mochila de Armas</h1>
-        <p>Armazene e visualize suas armas adquiridas</p>
-    </header>
-    
-    <main>
-        <section class="backpack-section">
-            <h2>Mochila do Jogador</h2>
-            <p>Adicione armas à sua mochila e visualize as imagens aqui.</p>
+  <div class="container">
+    <h1>Sua Mochila de Aventura</h1>
 
-            <div class="backpack-container">
-                <!-- Slots da mochila -->
-                <div class="backpack-slot" id="slot1" onclick="addWeapon(1)">
-                    <img src="" alt="Arma 1" id="weapon1" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot2" onclick="addWeapon(2)">
-                    <img src="" alt="Arma 2" id="weapon2" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot3" onclick="addWeapon(3)">
-                    <img src="" alt="Arma 3" id="weapon3" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot4" onclick="addWeapon(4)">
-                    <img src="" alt="Arma 4" id="weapon4" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot5" onclick="addWeapon(5)">
-                    <img src="" alt="Arma 5" id="weapon5" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot6" onclick="addWeapon(6)">
-                    <img src="" alt="Arma 6" id="weapon6" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot7" onclick="addWeapon(7)">
-                    <img src="" alt="Arma 7" id="weapon7" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot8" onclick="addWeapon(8)">
-                    <img src="" alt="Arma 8" id="weapon8" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot9" onclick="addWeapon(9)">
-                    <img src="" alt="Arma 9" id="weapon9" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot10" onclick="addWeapon(10)">
-                    <img src="" alt="Arma 10" id="weapon10" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot11" onclick="addWeapon(11)">
-                    <img src="" alt="Arma 11" id="weapon11" class="weapon-image">
-                </div>
-                <div class="backpack-slot" id="slot12" onclick="addWeapon(12)">
-                    <img src="" alt="Arma 12" id="weapon12" class="weapon-image">
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="add-item">
+      <label for="item-image">Adicionar item:</label>
+      <input type="file" id="item-image" accept="image/*" />
+      <button onclick="addItem()">Adicionar à Mochila</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 SpellTree. Todos os direitos reservados.</p>
-    </footer>
+    <div class="backpack" id="backpack">
+      <h2>Itens Guardados</h2>
+      <div id="items-container"></div>
+    </div>
+  </div>
 
-    <script>
-        function addWeapon(slot) {
-            const weaponImages = [
-                'https://eldenring.wiki.fextralife.com/file/Elden-Ring/carian_greatsword_(royal)_sorcery_elden_ring_wiki_guide_200px.png', // Exemplo de imagem de arma
-                'https://eldenring.wiki.fextralife.com/file/Elden-Ring/longsword_sorcery_elden_ring_wiki_guide_200px.png', // Exemplo 2
-                'https://eldenring.wiki.fextralife.com/file/Elden-Ring/katana_sorcery_elden_ring_wiki_guide_200px.png' // Exemplo 3
-                // Adicione mais imagens conforme necessário
-            ];
-
-            // Seleciona o slot e a imagem do jogador
-            const slotElement = document.getElementById(`slot${slot}`);
-            const weaponImageElement = document.getElementById(`weapon${slot}`);
-
-            // Adiciona a imagem de uma arma à mochila
-            const randomWeaponIndex = Math.floor(Math.random() * weaponImages.length);
-            const imageURL = weaponImages[randomWeaponIndex];
-
-            weaponImageElement.src = imageURL;
-            weaponImageElement.style.display = 'block'; // Torna a imagem visível
-        }
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
