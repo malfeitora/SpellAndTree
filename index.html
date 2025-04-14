@@ -11,181 +11,113 @@
             color: #fff;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             padding: 20px;
         }
 
-        .spell-card {
-            background-color: #333;
-            border-radius: 8px;
+        .image-card {
             margin: 15px;
-            padding: 15px;
             width: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             text-align: center;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
 
-        .spell-card img {
+        .image-card img {
             width: 100%;
             height: 150px;
             object-fit: cover;
             border-radius: 8px;
         }
-
-        .spell-title {
-            font-size: 18px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .spell-req {
-            font-size: 14px;
-            color: #aaa;
-            margin-top: 5px;
-        }
-
-        .spell-desc {
-            font-size: 14px;
-            margin-top: 10px;
-            color: #ddd;
-        }
-
-        h1 {
-            text-align: center;
-            color: #f5a623;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
-    <h1>SpellTree</h1>
     <div class="container">
-
         <!-- Feitiço 1 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_spell_elden_ring_wiki_guide_200px.png" alt="Fireball">
-            <div class="spell-title">1. Fireball</div>
-            <div class="spell-req">INT 10 | FÉ 0</div>
-            <div class="spell-desc">Lança uma bola de fogo que causa dano de fogo aos inimigos.</div>
         </div>
 
         <!-- Feitiço 2 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ignite_spell_elden_ring_wiki_guide_200px.png" alt="Ignite">
-            <div class="spell-title">2. Ignite</div>
-            <div class="spell-req">INT 14 | FÉ 0</div>
-            <div class="spell-desc">Cria uma explosão de chamas que incendeia os inimigos próximos.</div>
         </div>
 
         <!-- Feitiço 3 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bolide_spell_elden_ring_wiki_guide_200px.png" alt="Great Fireball">
-            <div class="spell-title">3. Great Fireball</div>
-            <div class="spell-req">INT 20 | FÉ 0</div>
-            <div class="spell-desc">Lança uma versão maior da Fireball, causando mais dano em área.</div>
         </div>
 
         <!-- Feitiço 4 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fire_wave_spell_elden_ring_wiki_guide_200px.png" alt="Fire Wave">
-            <div class="spell-title">4. Fire Wave</div>
-            <div class="spell-req">INT 30 | FÉ 0</div>
-            <div class="spell-desc">Cria uma onda de chamas que varre a frente do conjurador.</div>
         </div>
 
         <!-- Feitiço 5 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/firestorm_spell_elden_ring_wiki_guide_200px.png" alt="Firestorm">
-            <div class="spell-title">5. Firestorm</div>
-            <div class="spell-req">INT 35 | FÉ 0</div>
-            <div class="spell-desc">Cria uma tempestade de chamas que causa dano massivo em área.</div>
         </div>
 
         <!-- Feitiço 6 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magical_pillar_spell_elden_ring_wiki_guide_200px.png" alt="Magic Pillar">
-            <div class="spell-title">6. Magic Pillar</div>
-            <div class="spell-req">INT 16 | FÉ 0</div>
-            <div class="spell-desc">Ergue pilares de magia que causam dano em área.</div>
         </div>
 
         <!-- Feitiço 7 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magic_bolt_spell_elden_ring_wiki_guide_200px.png" alt="Magic Bolt">
-            <div class="spell-title">7. Magic Bolt</div>
-            <div class="spell-req">INT 12 | FÉ 0</div>
-            <div class="spell-desc">Dispara um projétil mágico que causa dano direto ao inimigo.</div>
         </div>
 
         <!-- Feitiço 8 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magic_eruption_spell_elden_ring_wiki_guide_200px.png" alt="Magic Eruption">
-            <div class="spell-title">8. Magic Eruption</div>
-            <div class="spell-req">INT 20 | FÉ 0</div>
-            <div class="spell-desc">Cria uma explosão de magia ao redor do conjurador, causando dano em área.</div>
         </div>
 
         <!-- Feitiço 9 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/mana_wave_spell_elden_ring_wiki_guide_200px.png" alt="Mana Wave">
-            <div class="spell-title">9. Mana Wave</div>
-            <div class="spell-req">INT 25 | FÉ 0</div>
-            <div class="spell-desc">Libera uma onda de energia mágica que causa dano ao longo de uma linha reta.</div>
         </div>
 
         <!-- Feitiço 10 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_fireball_spell_elden_ring_wiki_guide_200px.png" alt="Glintstone Fireball">
-            <div class="spell-title">10. Glintstone Fireball</div>
-            <div class="spell-req">INT 15 | FÉ 0</div>
-            <div class="spell-desc">Lança uma bola de fogo mágica de glintstone que explode ao contato.</div>
         </div>
 
         <!-- Feitiço 11 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/rock_blade_spell_elden_ring_wiki_guide_200px.png" alt="Rock Blade">
-            <div class="spell-title">11. Rock Blade</div>
-            <div class="spell-req">INT 18 | FÉ 0</div>
-            <div class="spell-desc">Lança uma lâmina de rocha afiada que causa dano físico e mágico.</div>
         </div>
 
         <!-- Feitiço 12 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/spell_of_strengthen_spell_elden_ring_wiki_guide_200px.png" alt="Spell of Strengthen">
-            <div class="spell-title">12. Spell of Strengthen</div>
-            <div class="spell-req">INT 22 | FÉ 0</div>
-            <div class="spell-desc">Fortalece o poder de ataque de todas as magias conjuradas no campo de batalha.</div>
         </div>
 
         <!-- Feitiço 13 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/force_spell_elden_ring_wiki_guide_200px.png" alt="Force">
-            <div class="spell-title">13. Force</div>
-            <div class="spell-req">INT 17 | FÉ 0</div>
-            <div class="spell-desc">Empurra inimigos à frente do conjurador com uma poderosa onda de força.</div>
         </div>
 
         <!-- Feitiço 14 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/flame_blast_spell_elden_ring_wiki_guide_200px.png" alt="Flame Blast">
-            <div class="spell-title">14. Flame Blast</div>
-            <div class="spell-req">INT 28 | FÉ 0</div>
-            <div class="spell-desc">Emite uma explosão de chamas ao redor do conjurador, causando grande dano.</div>
         </div>
 
         <!-- Feitiço 15 -->
-        <div class="spell-card">
+        <div class="image-card">
             <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_spell_elden_ring_wiki_guide_200px.png" alt="Flame of Frenzy">
-            <div class="spell-title">15. Flame of Frenzy</div>
-            <div class="spell-req">INT 30 | FÉ 0</div>
-            <div class="spell-desc">Lança uma chama frenética que explode ao atingir o inimigo.</div>
         </div>
-
     </div>
 </body>
 </html>
