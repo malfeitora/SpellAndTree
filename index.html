@@ -1,179 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SpellTree</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      font-family: 'Georgia', serif;
-      color: #e0dede;
-      padding: 40px;
-      background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
-    }
-    h1 {
-      text-align: center;
-      font-size: 3em;
-      color: #b8924d;
-      margin-bottom: 40px;
-      text-shadow: 0 0 10px #000;
-    }
-    .spell-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .spell-card {
-      background: #1a1a1a;
-      border: 2px solid #4a3b27;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 12px rgba(255, 235, 200, 0.1);
-    }
-    .spell-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .spell-title {
-      font-size: 1.4em;
-      color: #d2b48c;
-      margin-bottom: 10px;
-    }
-    .spell-req {
-      font-style: italic;
-      color: #b0a084;
-    }
-    .spell-desc {
-      margin-top: 10px;
-      line-height: 1.4;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpellTree</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .spell-card {
+            background-color: #333;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .spell-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .spell-title {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .spell-req {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .spell-desc {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f5a623;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-  <h1>SpellTree</h1>
-  <div class="spell-grid">
-    <!-- Feitiço 1 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_pebble_elden_ring_wiki_guide_200px.png" alt="Glintstone Pebble">
-      <div class="spell-title">1. Glintstone Pebble</div>
-      <div class="spell-req">INT 10 | FÉ 0</div>
-      <div class="spell-desc">Lança um pequeno fragmento de magia glintstone. Feitiço básico e eficiente.</div>
-    </div>
+    <h1>SpellTree</h1>
+    <div class="container">
 
-    <!-- Feitiço 2 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_arc_elden_ring_wiki_guide_200px.png" alt="Glintstone Arc">
-      <div class="spell-title">2. Glintstone Arc</div>
-      <div class="spell-req">INT 13 | FÉ 0</div>
-      <div class="spell-desc">Projeta um arco mágico que atinge múltiplos inimigos.</div>
-    </div>
+        <!-- Feitiço 1 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_spell_elden_ring_wiki_guide_200px.png" alt="Fireball">
+            <div class="spell-title">1. Fireball</div>
+            <div class="spell-req">INT 10 | FÉ 0</div>
+            <div class="spell-desc">Lança uma bola de fogo que causa dano de fogo aos inimigos.</div>
+        </div>
 
-    <!-- Feitiço 3 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/great_glintstone_shard_spell_elden_ring_wiki_guide_200px.png" alt="Great Glintstone Shard">
-      <div class="spell-title">3. Great Glintstone Shard</div>
-      <div class="spell-req">INT 16 | FÉ 0</div>
-      <div class="spell-desc">Dispara uma versão maior e mais poderosa do fragmento glintstone.</div>
-    </div>
+        <!-- Feitiço 2 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ignite_spell_elden_ring_wiki_guide_200px.png" alt="Ignite">
+            <div class="spell-title">2. Ignite</div>
+            <div class="spell-req">INT 14 | FÉ 0</div>
+            <div class="spell-desc">Cria uma explosão de chamas que incendeia os inimigos próximos.</div>
+        </div>
 
-    <!-- Feitiço 4 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_cometshard_spell_elden_ring_wiki_guide_200px.png" alt="Glintstone Cometshard">
-      <div class="spell-title">4. Glintstone Cometshard</div>
-      <div class="spell-req">INT 18 | FÉ 0</div>
-      <div class="spell-desc">Projeta um cometa mágico veloz que causa alto dano.</div>
-    </div>
+        <!-- Feitiço 3 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bolide_spell_elden_ring_wiki_guide_200px.png" alt="Great Fireball">
+            <div class="spell-title">3. Great Fireball</div>
+            <div class="spell-req">INT 20 | FÉ 0</div>
+            <div class="spell-desc">Lança uma versão maior da Fireball, causando mais dano em área.</div>
+        </div>
 
-    <!-- Feitiço 5 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/comet_spell_elden_ring_wiki_guide_200px.png" alt="Comet">
-      <div class="spell-title">5. Comet</div>
-      <div class="spell-req">INT 24 | FÉ 0</div>
-      <div class="spell-desc">Lança um cometa massivo com grande poder destrutivo.</div>
-    </div>
+        <!-- Feitiço 4 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fire_wave_spell_elden_ring_wiki_guide_200px.png" alt="Fire Wave">
+            <div class="spell-title">4. Fire Wave</div>
+            <div class="spell-req">INT 30 | FÉ 0</div>
+            <div class="spell-desc">Cria uma onda de chamas que varre a frente do conjurador.</div>
+        </div>
 
-    <!-- Feitiço 6 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/starlight_spell_elden_ring_wiki_guide_200px.png" alt="Starlight">
-      <div class="spell-title">6. Starlight</div>
-      <div class="spell-req">INT 15 | FÉ 0</div>
-      <div class="spell-desc">Evoca uma luz mágica para iluminar os arredores.</div>
-    </div>
+        <!-- Feitiço 5 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/firestorm_spell_elden_ring_wiki_guide_200px.png" alt="Firestorm">
+            <div class="spell-title">5. Firestorm</div>
+            <div class="spell-req">INT 35 | FÉ 0</div>
+            <div class="spell-desc">Cria uma tempestade de chamas que causa dano massivo em área.</div>
+        </div>
 
-    <!-- Feitiço 7 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/starlight_shards_elden_ring_wiki_guide_200px.png" alt="Stars of Ruin">
-      <div class="spell-title">7. Stars of Ruin</div>
-      <div class="spell-req">INT 43 | FÉ 0</div>
-      <div class="spell-desc">Dispara uma rajada de estrelas perseguidoras. Muito difícil de evitar.</div>
-    </div>
+        <!-- Feitiço 6 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magical_pillar_spell_elden_ring_wiki_guide_200px.png" alt="Magic Pillar">
+            <div class="spell-title">6. Magic Pillar</div>
+            <div class="spell-req">INT 16 | FÉ 0</div>
+            <div class="spell-desc">Ergue pilares de magia que causam dano em área.</div>
+        </div>
 
-    <!-- Feitiço 8 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/shard_spiral_spell_elden_ring_wiki_guide_200px.png" alt="Shard Spiral">
-      <div class="spell-title">8. Shard Spiral</div>
-      <div class="spell-req">INT 27 | FÉ 0</div>
-      <div class="spell-desc">Lança fragmentos mágicos que perfuram o inimigo em espiral.</div>
-    </div>
+        <!-- Feitiço 7 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magic_bolt_spell_elden_ring_wiki_guide_200px.png" alt="Magic Bolt">
+            <div class="spell-title">7. Magic Bolt</div>
+            <div class="spell-req">INT 12 | FÉ 0</div>
+            <div class="spell-desc">Dispara um projétil mágico que causa dano direto ao inimigo.</div>
+        </div>
 
-    <!-- Feitiço 9 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_barrage_spell_elden_ring_wiki_guide_200px.png" alt="Crystal Barrage">
-      <div class="spell-title">9. Crystal Barrage</div>
-      <div class="spell-req">INT 23 | FÉ 0</div>
-      <div class="spell-desc">Lança uma rajada rápida de cristais mágicos.</div>
-    </div>
+        <!-- Feitiço 8 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/magic_eruption_spell_elden_ring_wiki_guide_200px.png" alt="Magic Eruption">
+            <div class="spell-title">8. Magic Eruption</div>
+            <div class="spell-req">INT 20 | FÉ 0</div>
+            <div class="spell-desc">Cria uma explosão de magia ao redor do conjurador, causando dano em área.</div>
+        </div>
 
-    <!-- Feitiço 10 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_release_spell_elden_ring_wiki_guide_200px.png" alt="Crystal Release">
-      <div class="spell-title">10. Crystal Release</div>
-      <div class="spell-req">INT 28 | FÉ 0</div>
-      <div class="spell-desc">Libera uma explosão de cristais ao redor do conjurador.</div>
-    </div>
+        <!-- Feitiço 9 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/mana_wave_spell_elden_ring_wiki_guide_200px.png" alt="Mana Wave">
+            <div class="spell-title">9. Mana Wave</div>
+            <div class="spell-req">INT 25 | FÉ 0</div>
+            <div class="spell-desc">Libera uma onda de energia mágica que causa dano ao longo de uma linha reta.</div>
+        </div>
 
-    <!-- Feitiço 11 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/comet_azur_spell_elden_ring_wiki_guide_200px.png" alt="Comet Azur">
-      <div class="spell-title">11. Comet Azur</div>
-      <div class="spell-req">INT 60 | FÉ 0</div>
-      <div class="spell-desc">Lança um gigantesco feixe de energia mágica em linha reta.</div>
-    </div>
+        <!-- Feitiço 10 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_fireball_spell_elden_ring_wiki_guide_200px.png" alt="Glintstone Fireball">
+            <div class="spell-title">10. Glintstone Fireball</div>
+            <div class="spell-req">INT 15 | FÉ 0</div>
+            <div class="spell-desc">Lança uma bola de fogo mágica de glintstone que explode ao contato.</div>
+        </div>
 
-    <!-- Feitiço 12 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/stars_of_ruin_spell_elden_ring_wiki_guide_200px.png" alt="Founding Rain of Stars">
-      <div class="spell-title">12. Founding Rain of Stars</div>
-      <div class="spell-req">INT 52 | FÉ 0</div>
-      <div class="spell-desc">Convoca uma chuva estelar devastadora sobre os inimigos.</div>
-    </div>
+        <!-- Feitiço 11 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/rock_blade_spell_elden_ring_wiki_guide_200px.png" alt="Rock Blade">
+            <div class="spell-title">11. Rock Blade</div>
+            <div class="spell-req">INT 18 | FÉ 0</div>
+            <div class="spell-desc">Lança uma lâmina de rocha afiada que causa dano físico e mágico.</div>
+        </div>
 
-    <!-- Feitiço 13 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/rojalos_greatsword_spell_elden_ring_wiki_guide_200px.png" alt="Loretta's Greatbow">
-      <div class="spell-title">13. Loretta's Greatbow</div>
-      <div class="spell-req">INT 26 | FÉ 0</div>
-      <div class="spell-desc">Evoca um grande arco mágico para lançar uma flecha poderosa.</div>
-    </div>
+        <!-- Feitiço 12 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/spell_of_strengthen_spell_elden_ring_wiki_guide_200px.png" alt="Spell of Strengthen">
+            <div class="spell-title">12. Spell of Strengthen</div>
+            <div class="spell-req">INT 22 | FÉ 0</div>
+            <div class="spell-desc">Fortalece o poder de ataque de todas as magias conjuradas no campo de batalha.</div>
+        </div>
 
-    <!-- Feitiço 14 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/lorettas_mastery_spell_elden_ring_wiki_guide_200px.png" alt="Loretta's Mastery">
-      <div class="spell-title">14. Loretta's Mastery</div>
-      <div class="spell-req">INT 46 | FÉ 0</div>
-      <div class="spell-desc">Dispara várias flechas mágicas ao mesmo tempo com extrema precisão.</div>
-    </div>
+        <!-- Feitiço 13 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/force_spell_elden_ring_wiki_guide_200px.png" alt="Force">
+            <div class="spell-title">13. Force</div>
+            <div class="spell-req">INT 17 | FÉ 0</div>
+            <div class="spell-desc">Empurra inimigos à frente do conjurador com uma poderosa onda de força.</div>
+        </div>
 
-    <!-- Feitiço 15 -->
-    <div class="spell-card">
-      <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/carina_piercer_spell_elden_ring_wiki_guide_200px.png" alt="Carian Piercer">
-      <div class="spell-title">15. Carian Piercer</div>
-      <div class="spell-req">INT 27 | FÉ 0</div>
-      <div class="spell-desc">Cria uma lâmina mágica perfurante com velocidade letal.</div>
-    </div>
+        <!-- Feitiço 14 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/flame_blast_spell_elden_ring_wiki_guide_200px.png" alt="Flame Blast">
+            <div class="spell-title">14. Flame Blast</div>
+            <div class="spell-req">INT 28 | FÉ 0</div>
+            <div class="spell-desc">Emite uma explosão de chamas ao redor do conjurador, causando grande dano.</div>
+        </div>
 
-  </div>
+        <!-- Feitiço 15 -->
+        <div class="spell-card">
+            <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_spell_elden_ring_wiki_guide_200px.png" alt="Flame of Frenzy">
+            <div class="spell-title">15. Flame of Frenzy</div>
+            <div class="spell-req">INT 30 | FÉ 0</div>
+            <div class="spell-desc">Lança uma chama frenética que explode ao atingir o inimigo.</div>
+        </div>
+
+    </div>
 </body>
 </html>
