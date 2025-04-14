@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Feitiços - Elden Ring</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f0f0f0;
-      font-family: serif;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .feitiço {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .feitiço img {
-      width: 80px;
-      border-radius: 8px;
-    }
-    .detalhes {
-      display: flex;
-      flex-direction: column;
-    }
-    .detalhes h2 {
-      margin: 0 0 8px;
-    }
-    .requisitos {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feitiços de Elden Ring</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feitiço {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feitiço img {
+            width: 150px;
+            border-radius: 8px;
+        }
+        .detalhes {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .detalhes h2 {
+            margin-bottom: 10px;
+        }
+        .detalhes p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .detalhes .atributos {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        .detalhes .nivel {
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,153 +56,104 @@
 
 <!-- Feitiço 1 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/rock_blast_sorcery_elden_ring_wiki_guide_200px.png" alt="Rock Blast">
-  <div class="detalhes">
-    <h2>Rock Blast</h2>
-    <p><strong>Requisitos:</strong> INT 18</p>
-    <p><strong>Descrição:</strong> Lança uma grande rocha explosiva que causa dano mágico de área em inimigos atingidos.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_sorcery_elden_ring_wiki_guide_200px.png" alt="Fireball">
+    <div class="detalhes">
+        <h2>Fireball</h2>
+        <p><strong>Requisitos:</strong> INT 10</p>
+        <p class="atributos">Causa dano mágico e de fogo em inimigos na área de impacto.</p>
+        <p><strong>Tempo de Conjuração:</strong> 1 Turno</p>
+        <p class="nivel">Nível 1: Lança uma bola de fogo básica.</p>
+        <p><strong>Descrição:</strong> Uma bola de fogo que explode ao atingir inimigos, causando dano em área.</p>
+    </div>
 </div>
 
 <!-- Feitiço 2 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_comet_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Comet">
-  <div class="detalhes">
-    <h2>Glintstone Comet</h2>
-    <p><strong>Requisitos:</strong> INT 30</p>
-    <p><strong>Descrição:</strong> Lança uma cometa de glintstone que atravessa os inimigos, causando dano mágico intenso.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_dart_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Dart">
+    <div class="detalhes">
+        <h2>Glintstone Dart</h2>
+        <p><strong>Requisitos:</strong> INT 15</p>
+        <p class="atributos">Lança um projétil de glintstone com baixo poder mágico, ideal para ataques rápidos.</p>
+        <p><strong>Tempo de Conjuração:</strong> 1 Turno</p>
+        <p class="nivel">Nível 1: Um projétil básico de glintstone.</p>
+        <p><strong>Descrição:</strong> Um feitiço simples que dispara um projétil de glintstone em linha reta, causando dano moderado.</p>
+    </div>
 </div>
 
 <!-- Feitiço 3 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ranni_dark_moon_sorcery_elden_ring_wiki_guide_200px.png" alt="Ranni's Dark Moon">
-  <div class="detalhes">
-    <h2>Ranni's Dark Moon</h2>
-    <p><strong>Requisitos:</strong> INT 68</p>
-    <p><strong>Descrição:</strong> Lança uma lua sombria que causa dano mágico em área e reduz a resistência mágica dos inimigos atingidos.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/raging_fire_sorcery_elden_ring_wiki_guide_200px.png" alt="Raging Fire">
+    <div class="detalhes">
+        <h2>Raging Fire</h2>
+        <p><strong>Requisitos:</strong> INT 45</p>
+        <p class="atributos">Invoca uma onda de chamas que se espalham em várias direções, atingindo múltiplos inimigos.</p>
+        <p><strong>Tempo de Conjuração:</strong> 2 Turnos</p>
+        <p class="nivel">Nível 2: Causa dano em uma área maior.</p>
+        <p><strong>Descrição:</strong> Um feitiço potente que cria uma onda de chamas poderosas, que devastam todos que estiverem na linha de fogo.</p>
+    </div>
 </div>
 
 <!-- Feitiço 4 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/meteorite_sorcery_elden_ring_wiki_guide_200px.png" alt="Meteorite">
-  <div class="detalhes">
-    <h2>Meteorite</h2>
-    <p><strong>Requisitos:</strong> INT 18</p>
-    <p><strong>Descrição:</strong> Lança um meteoro massivo que causa grande dano mágico e atordoa inimigos ao atingir o solo.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/black_flame_blast_sorcery_elden_ring_wiki_guide_200px.png" alt="Black Flame Blast">
+    <div class="detalhes">
+        <h2>Black Flame Blast</h2>
+        <p><strong>Requisitos:</strong> INT 50</p>
+        <p class="atributos">Libera uma poderosa explosão de chamas negras, causando grande dano mágico e de fogo.</p>
+        <p><strong>Tempo de Conjuração:</strong> 3 Turnos</p>
+        <p class="nivel">Nível 3: Feitiço devastador com alto alcance.</p>
+        <p><strong>Descrição:</strong> Libera uma explosão de chamas negras ao redor do conjurador, causando grandes danos aos inimigos em uma área ampla.</p>
+    </div>
 </div>
 
 <!-- Feitiço 5 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ancient_moonlight_sorcery_elden_ring_wiki_guide_200px.png" alt="Ancient Moonlight">
-  <div class="detalhes">
-    <h2>Ancient Moonlight</h2>
-    <p><strong>Requisitos:</strong> INT 50</p>
-    <p><strong>Descrição:</strong> Invoca uma poderosa lua cheia que causa grandes danos aos inimigos com um brilho etéreo.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/firestorm_sorcery_elden_ring_wiki_guide_200px.png" alt="Firestorm">
+    <div class="detalhes">
+        <h2>Firestorm</h2>
+        <p><strong>Requisitos:</strong> INT 40</p>
+        <p class="atributos">Invoca uma tempestade de fogo ao redor do conjurador, causando dano em todos os inimigos ao seu redor.</p>
+        <p><strong>Tempo de Conjuração:</strong> 2 Turnos</p>
+        <p class="nivel">Nível 2: Aumenta a intensidade da tempestade.</p>
+        <p><strong>Descrição:</strong> Uma poderosa tempestade de fogo que arrasa os inimigos ao redor, causando dano contínuo.</p>
+    </div>
 </div>
 
 <!-- Feitiço 6 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/fireball_sorcery_elden_ring_wiki_guide_200px.png" alt="Fireball">
-  <div class="detalhes">
-    <h2>Fireball</h2>
-    <p><strong>Requisitos:</strong> INT 12</p>
-    <p><strong>Descrição:</strong> Lança uma bola de fogo que explode ao atingir o inimigo, causando dano de fogo em área.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/royal_ray_sorcery_elden_ring_wiki_guide_200px.png" alt="Royal Ray">
+    <div class="detalhes">
+        <h2>Royal Ray</h2>
+        <p><strong>Requisitos:</strong> INT 60</p>
+        <p class="atributos">Lança um feixe de energia real que atravessa inimigos em linha reta.</p>
+        <p><strong>Tempo de Conjuração:</strong> 2 Turnos</p>
+        <p class="nivel">Nível 2: Aumenta o poder do feixe e a distância.</p>
+        <p><strong>Descrição:</strong> Um feixe concentrado de energia real que atravessa os inimigos em uma linha reta, causando danos significativos.</p>
+    </div>
 </div>
 
 <!-- Feitiço 7 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_arrows_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Arrows">
-  <div class="detalhes">
-    <h2>Glintstone Arrows</h2>
-    <p><strong>Requisitos:</strong> INT 10</p>
-    <p><strong>Descrição:</strong> Lança flechas mágicas de glintstone, causando dano à distância e tendo uma trajetória rápida.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_spear_sorcery_elden_ring_wiki_guide_200px.png" alt="Crystal Spear">
+    <div class="detalhes">
+        <h2>Crystal Spear</h2>
+        <p><strong>Requisitos:</strong> INT 50</p>
+        <p class="atributos">Lança uma lança de cristal poderosa em linha reta, causando dano mágico.</p>
+        <p><strong>Tempo de Conjuração:</strong> 2 Turnos</p>
+        <p class="nivel">Nível 2: Aumenta o alcance da lança e o dano.</p>
+        <p><strong>Descrição:</strong> Um feitiço que conjura uma lança de cristal, que atravessa inimigos causando grandes danos ao atingir.</p>
+    </div>
 </div>
 
 <!-- Feitiço 8 -->
 <div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/lord_of_bolide_sorcery_elden_ring_wiki_guide_200px.png" alt="Lord of Bolide">
-  <div class="detalhes">
-    <h2>Lord of Bolide</h2>
-    <p><strong>Requisitos:</strong> INT 40</p>
-    <p><strong>Descrição:</strong> Invoca uma enorme rocha mágica que se move em direção ao inimigo, causando grande dano mágico.</p>
-  </div>
+    <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/black_fireball_sorcery_elden_ring_wiki_guide_200px.png" alt="Black Fireball">
+    <div class="detalhes">
+        <h2>Black Fireball</h2>
+        <p><strong>Requisitos:</strong> INT 40</p>
+        <p class="atributos">Lança uma bola de fogo negra que causa dano em área e aumenta com o tempo de conjuração.</p>
+        <p><strong>Tempo de Conjuração:</strong> 2 Turnos</p>
+        <p class="nivel">Nível 2: Bola de fogo maior e mais forte.</p>
+        <p><strong>Descrição:</strong> Conjura uma bola de fogo negra que explode em uma grande área, causando grande dano aos inimigos.</p>
+    </div>
 </div>
-
-<!-- Feitiço 9 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/teleport_sorcery_elden_ring_wiki_guide_200px.png" alt="Teleport">
-  <div class="detalhes">
-    <h2>Teleport</h2>
-    <p><strong>Requisitos:</strong> INT 20</p>
-    <p><strong>Descrição:</strong> Permite ao usuário teletransportar-se para uma localização previamente marcada.</p>
-  </div>
-</div>
-
-<!-- Feitiço 10 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ice_rain_sorcery_elden_ring_wiki_guide_200px.png" alt="Ice Rain">
-  <div class="detalhes">
-    <h2>Ice Rain</h2>
-    <p><strong>Requisitos:</strong> INT 45</p>
-    <p><strong>Descrição:</strong> Invoca uma chuva de gelo que causa dano de gelo em uma área ampla.</p>
-  </div>
-</div>
-
-<!-- Feitiço 11 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/soul_stream_sorcery_elden_ring_wiki_guide_200px.png" alt="Soul Stream">
-  <div class="detalhes">
-    <h2>Soul Stream</h2>
-    <p><strong>Requisitos:</strong> INT 40</p>
-    <p><strong>Descrição:</strong> Lança uma onda de almas que atravessa os inimigos causando grande dano mágico.</p>
-  </div>
-</div>
-
-<!-- Feitiço 12 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/frozen_storm_sorcery_elden_ring_wiki_guide_200px.png" alt="Frozen Storm">
-  <div class="detalhes">
-    <h2>Frozen Storm</h2>
-    <p><strong>Requisitos:</strong> INT 50</p>
-    <p><strong>Descrição:</strong> Conjura uma tempestade de gelo que causa dano contínuo aos inimigos em sua área de efeito.</p>
-  </div>
-</div>
-
-<!-- Feitiço 13 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_shard_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Shard">
-  <div class="detalhes">
-    <h2>Glintstone Shard</h2>
-    <p><strong>Requisitos:</strong> INT 10</p>
-    <p><strong>Descrição:</strong> Lança um pequeno fragmento de glintstone que causa dano direto aos inimigos.</p>
-  </div>
-</div>
-
-<!-- Feitiço 14 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ricochet_sorcery_elden_ring_wiki_guide_200px.png" alt="Ricochet">
-  <div class="detalhes">
-    <h2>Ricochet</h2>
-    <p><strong>Requisitos:</strong> INT 25</p>
-    <p><strong>Descrição:</strong> Lança um feitiço que ricocheteia em várias direções, atingindo vários inimigos.</p>
-  </div>
-</div>
-
-<!-- Feitiço 15 -->
-<div class="feitiço">
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_blast_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Blast">
-  <div class="detalhes">
-    <h2>Glintstone Blast</h2>
-    <p><strong>Requisitos:</strong> INT 35</p>
-    <p><strong>Descrição:</strong> Lança uma explosão de glintstone que causa dano massivo ao inimigo em uma área pequena.</p>
-  </div>
-</div>
-
-</body>
-         </html>
