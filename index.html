@@ -1,69 +1,97 @@
-<div class="spell">
-  <h2>Carian Greatsword (Royal)</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/carian_greatsword_(royal)_sorcery_elden_ring_wiki_guide_200px.png" alt="Carian Greatsword (Royal)">
-  <p><strong>Requisitos:</strong> INT 24</p>
-  <p>Versão aprimorada do Carian Greatsword, usada pela realeza mágica. Desfere golpes com maior alcance e poder.</p>
-</div>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpellTree - Status do Jogador</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SpellTree</h1>
+        <p>Gerencie os status do seu personagem!</p>
+    </header>
+    <main>
+        <section class="status-section">
+            <h2>Status do Jogador</h2>
 
-<div class="spell">
-  <h2>Glintstone Icecrag</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/glintstone_icecrag_sorcery_elden_ring_wiki_guide_200px.png" alt="Glintstone Icecrag">
-  <p><strong>Requisitos:</strong> INT 15</p>
-  <p>Projeta fragmentos mágicos de gelo em linha reta. Causa dano mágico e efeito de congelamento.</p>
-</div>
+            <div class="status-container">
+                <!-- Vigor -->
+                <div class="status">
+                    <label for="vigor">Vigor:</label>
+                    <input type="range" id="vigor" name="vigor" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="vigor-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Freezing Mist</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/freezing_mist_sorcery_elden_ring_wiki_guide_200px.png" alt="Freezing Mist">
-  <p><strong>Requisitos:</strong> INT 21</p>
-  <p>Cria uma névoa gelada que congela os inimigos com o tempo. Excelente para controle de área.</p>
-</div>
+                <!-- Mind -->
+                <div class="status">
+                    <label for="mind">Mind:</label>
+                    <input type="range" id="mind" name="mind" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="mind-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Zamor Ice Storm</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/zamor_ice_storm_sorcery_elden_ring_wiki_guide_200px.png" alt="Zamor Ice Storm">
-  <p><strong>Requisitos:</strong> INT 36</p>
-  <p>Gera uma tempestade de gelo ao redor do conjurador, causando dano contínuo e congelamento.</p>
-</div>
+                <!-- Endurance -->
+                <div class="status">
+                    <label for="endurance">Endurance:</label>
+                    <input type="range" id="endurance" name="endurance" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="endurance-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Shattering Crystal</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/shattering_crystal_sorcery_elden_ring_wiki_guide_200px.png" alt="Shattering Crystal">
-  <p><strong>Requisitos:</strong> INT 27</p>
-  <p>Explode uma gema mágica à frente do conjurador, espalhando estilhaços de cristal em área.</p>
-</div>
+                <!-- Strength -->
+                <div class="status">
+                    <label for="strength">Strength:</label>
+                    <input type="range" id="strength" name="strength" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="strength-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Crystal Barrage</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_barrage_sorcery_elden_ring_wiki_guide_200px.png" alt="Crystal Barrage">
-  <p><strong>Requisitos:</strong> INT 23</p>
-  <p>Dispara uma chuva de pequenos fragmentos de cristal. Dano rápido e repetido a curta distância.</p>
-</div>
+                <!-- Dexterity -->
+                <div class="status">
+                    <label for="dexterity">Dexterity:</label>
+                    <input type="range" id="dexterity" name="dexterity" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="dexterity-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Crystal Burst</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_burst_sorcery_elden_ring_wiki_guide_200px.png" alt="Crystal Burst">
-  <p><strong>Requisitos:</strong> INT 18</p>
-  <p>Lança um grupo de estilhaços de cristal que se espalham em leque. Ideal para múltiplos inimigos.</p>
-</div>
+                <!-- Intelligence -->
+                <div class="status">
+                    <label for="intelligence">Intelligence:</label>
+                    <input type="range" id="intelligence" name="intelligence" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="intelligence-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Crystal Release</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_release_sorcery_elden_ring_wiki_guide_200px.png" alt="Crystal Release">
-  <p><strong>Requisitos:</strong> INT 41</p>
-  <p>Explode cristais ao redor do conjurador em todas as direções. Grande área de dano mágico.</p>
-</div>
+                <!-- Faith -->
+                <div class="status">
+                    <label for="faith">Faith:</label>
+                    <input type="range" id="faith" name="faith" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="faith-value">10</span>
+                </div>
 
-<div class="spell">
-  <h2>Crystal Torrent</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/crystal_torrent_sorcery_elden_ring_wiki_guide_200px.png" alt="Crystal Torrent">
-  <p><strong>Requisitos:</strong> INT 47</p>
-  <p>Libera um fluxo contínuo de cristais em linha reta. Excelente para derreter defesas inimigas.</p>
-</div>
+                <!-- Arcane -->
+                <div class="status">
+                    <label for="arcane">Arcane:</label>
+                    <input type="range" id="arcane" name="arcane" min="0" max="99" value="10" oninput="updateStatus()">
+                    <span id="arcane-value">10</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<div class="spell">
-  <h2>Terra Magicus</h2>
-  <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/terra_magica_sorcery_elden_ring_wiki_guide_200px.png" alt="Terra Magicus">
-  <p><strong>Requisitos:</strong> INT 20</p>
-  <p>Cria um círculo mágico no chão que aumenta o poder mágico de quem estiver dentro. Buff poderoso para magos.</p>
-</div>
+    <footer>
+        <p>&copy; 2025 SpellTree. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function updateStatus() {
+            // Atualiza os valores na interface conforme os sliders
+            document.getElementById('vigor-value').textContent = document.getElementById('vigor').value;
+            document.getElementById('mind-value').textContent = document.getElementById('mind').value;
+            document.getElementById('endurance-value').textContent = document.getElementById('endurance').value;
+            document.getElementById('strength-value').textContent = document.getElementById('strength').value;
+            document.getElementById('dexterity-value').textContent = document.getElementById('dexterity').value;
+            document.getElementById('intelligence-value').textContent = document.getElementById('intelligence').value;
+            document.getElementById('faith-value').textContent = document.getElementById('faith').value;
+            document.getElementById('arcane-value').textContent = document.getElementById('arcane').value;
+        }
+    </script>
+</body>
+</html>
