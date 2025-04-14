@@ -1,97 +1,93 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpellTree - Status do Jogador</title>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>SpellTree</h1>
-        <p>Gerencie os status do seu personagem!</p>
-    </header>
-    <main>
-        <section class="status-section">
-            <h2>Status do Jogador</h2>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <div class="status-container">
-                <!-- Vigor -->
-                <div class="status">
-                    <label for="vigor">Vigor:</label>
-                    <input type="range" id="vigor" name="vigor" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="vigor-value">10</span>
-                </div>
+/* Corpo do site */
+body {
+    font-family: 'MedievalSharp', cursive, Arial, sans-serif;
+    background-color: #2e2b2b;  /* Fundo escuro */
+    color: #d1c9a1;  /* Texto claro */
+    line-height: 1.6;
+    padding: 20px;
+}
 
-                <!-- Mind -->
-                <div class="status">
-                    <label for="mind">Mind:</label>
-                    <input type="range" id="mind" name="mind" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="mind-value">10</span>
-                </div>
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: url('https://www.transparenttextures.com/patterns/old-map.png') repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
-                <!-- Endurance -->
-                <div class="status">
-                    <label for="endurance">Endurance:</label>
-                    <input type="range" id="endurance" name="endurance" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="endurance-value">10</span>
-                </div>
+h1 {
+    font-size: 3rem;
+    color: #d1b07d; /* Cor dourada */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
-                <!-- Strength -->
-                <div class="status">
-                    <label for="strength">Strength:</label>
-                    <input type="range" id="strength" name="strength" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="strength-value">10</span>
-                </div>
+p {
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    font-weight: 300;
+}
 
-                <!-- Dexterity -->
-                <div class="status">
-                    <label for="dexterity">Dexterity:</label>
-                    <input type="range" id="dexterity" name="dexterity" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="dexterity-value">10</span>
-                </div>
+/* Seção de Status */
+.status-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
 
-                <!-- Intelligence -->
-                <div class="status">
-                    <label for="intelligence">Intelligence:</label>
-                    <input type="range" id="intelligence" name="intelligence" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="intelligence-value">10</span>
-                </div>
+.status-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-                <!-- Faith -->
-                <div class="status">
-                    <label for="faith">Faith:</label>
-                    <input type="range" id="faith" name="faith" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="faith-value">10</span>
-                </div>
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <!-- Arcane -->
-                <div class="status">
-                    <label for="arcane">Arcane:</label>
-                    <input type="range" id="arcane" name="arcane" min="0" max="99" value="10" oninput="updateStatus()">
-                    <span id="arcane-value">10</span>
-                </div>
-            </div>
-        </section>
-    </main>
+label {
+    font-size: 1.2rem;
+    color: #d1b07d;
+}
 
-    <footer>
-        <p>&copy; 2025 SpellTree. Todos os direitos reservados.</p>
-    </footer>
+input[type="range"] {
+    width: 70%;
+    height: 10px;
+    background: #555;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
 
-    <script>
-        function updateStatus() {
-            // Atualiza os valores na interface conforme os sliders
-            document.getElementById('vigor-value').textContent = document.getElementById('vigor').value;
-            document.getElementById('mind-value').textContent = document.getElementById('mind').value;
-            document.getElementById('endurance-value').textContent = document.getElementById('endurance').value;
-            document.getElementById('strength-value').textContent = document.getElementById('strength').value;
-            document.getElementById('dexterity-value').textContent = document.getElementById('dexterity').value;
-            document.getElementById('intelligence-value').textContent = document.getElementById('intelligence').value;
-            document.getElementById('faith-value').textContent = document.getElementById('faith').value;
-            document.getElementById('arcane-value').textContent = document.getElementById('arcane').value;
-        }
-    </script>
-</body>
-</html>
+input[type="range"]:focus {
+    background: #666;
+}
+
+span {
+    font-size: 1.2rem;
+    color: #b2b2b2;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #3b3b3b;
+    border-top: 2px solid #d1b07d;
+    color: #b2b2b2;
+}
