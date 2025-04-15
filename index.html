@@ -1,30 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mochila RPG</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Habilidades - RPG</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .skill-tree {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .level {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .skill-node {
+            width: 50px;
+            height: 50px;
+            background-color: #555;
+            border-radius: 50%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .skill-node.unlocked {
+            background-color: #0d7c00;
+        }
+        .skill-node.locked {
+            background-color: #444;
+        }
+        .skill-node span {
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+        .skill-description {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            z-index: 999;
+        }
+    </style>
 </head>
-<body><div class="status-container">
-  <h2>Status do Personagem</h2>
-  <div id="attributes"></div>
-</div>
-  <div class="container">
-    <h1>Sua Mochila de Aventura</h1>
+<body>
+    <h1 style="text-align: center;">Árvore de Habilidades</h1>
 
-    <div class="add-item">
-      <label for="item-image">Adicionar item:</label>
-      <input type="file" id="item-image" accept="image/*" />
-      <button onclick="addItem()">Adicionar à Mochila</button>
+    <div class="skill-tree">
+        <div class="level">
+            <div class="skill-node locked" data-skill="1">
+                <span>1</span>
+            </div>
+            <div class="skill-node locked" data-skill="2">
+                <span>2</span>
+            </div>
+        </div>
+        <div class="level">
+            <div class="skill-node locked" data-skill="3">
+                <span>3</span>
+            </div>
+            <div class="skill-node locked" data-skill="4">
+                <span>4</span>
+            </div>
+        </div>
+        <div class="level">
+            <div class="skill-node locked" data-skill="5">
+                <span>5</span>
+            </div>
+            <div class="skill-node locked" data-skill="6">
+                <span>6</span>
+            </div>
+        </div>
     </div>
 
-    <div class="backpack" id="backpack">
-      <h2>Itens Guardados</h2>
-      <div id="items-container"></div>
+    <div class="skill-description" id="skill-description">
+        <h3 id="skill-title">Habilidade</h3>
+        <p id="skill-requirements">Requisitos: Nível X, Força Y</p>
+        <p id="skill-description-text">Descrição da habilidade.</p>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script>
+        const skillNodes = document.querySelectorAll('.skill-node');
+        const descriptionBox = document.getElementById('skill-description');
+        const skillTitle = document.getElementById('skill-title');
+        const skillRequirements = document.getElementById('skill-requirements');
+        const skillDescriptionText = document.getElementById('skill-description-text');
+
+        skillNodes.forEach(skill => {
+            skill.addEventListener('click', () => {
+                if (skill.classList.contains('locked')) {
+                    alert("Nível insuficiente ou requisitos não atendidos!");
+                } else {
+                    const skillId = skill.getAttribute('data-skill');
+                    showSkillDescription(skillId);
+                }
+            });
+        });
+
+        function unlockSkill(skillId) {
+            const skillNode = document.querySelector(`.skill-node[data-skill='${skillId}']`);
+            skillNode.classList.remove('locked');
+            skillNode.classList.add('unlocked');
+        }
+
+        function showSkillDescription(skillId) {
+            // Exemplo de descrição de habilidades (você pode customizar com as habilidades reais de PoE2)
+            const skills = {
+                1: { name: "Habilidade 1", requirements: "Nível 1, Força 10", description: "Esta habilidade aumenta sua força." },
+                2: { name: "Habilidade 2", requirements: "Nível 2, Destreza 15", description: "Esta habilidade melhora sua destreza." },
+                3: { name: "Habilidade 3", requirements: "Nível 3, Inteligência 20", description: "Esta habilidade concede inteligência." },
+                // Adicione mais habilidades conforme necessário...
+            };
+
+            const skill = skills[skillId];
+            skillTitle.textContent = skill.name;
+            skillRequirements.textContent = skill.requirements;
+            skillDescriptionText.textContent = skill.description;
+
+            descriptionBox.style.display = 'block';
+        }
+
+        // Exemplo de desbloqueio de habilidades (isso pode ser dinâmico com base em atributos)
+        unlockSkill(1);
+        unlockSkill(2);
+        unlockSkill(3);
+    </script>
 </body>
 </html>
